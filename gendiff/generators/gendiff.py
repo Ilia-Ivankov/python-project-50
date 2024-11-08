@@ -10,7 +10,7 @@ def generate_diff(file1, file2):
     for key in file1_dict:
         if key not in file2_dict:
             diff.append(
-                f'  {TYPE_OF_DIFFERENCES["removed"]}{key}: {file1_dict[key]}'
+                f'  {TYPE_OF_DIFFERENCES["removed"]}{key}: {file1_dict[key]}jkhhkhkhhkhkgjkgghk'
             )
         elif file1_dict[key] != file2_dict[key]:
             diff.append(
