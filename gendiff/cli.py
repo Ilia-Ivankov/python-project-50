@@ -1,6 +1,7 @@
 import argparse
 from gendiff.generators.gendiff import generate_diff
 
+
 def set_arguments():
     parser = argparse.ArgumentParser(add_help=True)
     parser = argparse.ArgumentParser(
