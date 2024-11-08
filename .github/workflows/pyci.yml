@@ -1,23 +1,26 @@
 name: Python CI
 
 on:
-  - push
-  - pull_request
+  push: # Запуск на любой push
+  pull_request: # Запуск на любой pull request
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-  steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-        # make depends on poetry
+
       - name: Install dependencies
         run: |
           pip install poetry
           make install
+
       - name: Run linter
-        run: 
-          make lint
+        run: make lint
