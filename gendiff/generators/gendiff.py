@@ -1,17 +1,18 @@
 from gendiff.constants import TYPE_OF_DIFFERENCES
 from gendiff.utils import read_json
 
+
 def format_value(value):
     if isinstance(value, bool):
         return str(value).lower()
     return value
+
 
 def generate_diff(file1, file2):
     file1_dict = read_json(file1)
     file2_dict = read_json(file2)
     diff = ['{']
 
-    # Обрабатываем различия в ключах, которые есть только в file1 или file2
     for key in sorted(file1_dict):
         if key not in file2_dict:
             diff.append(
@@ -29,7 +30,6 @@ def generate_diff(file1, file2):
                 f'   {TYPE_OF_DIFFERENCES["unchanged"]}{key}: {format_value(file1_dict[key])}'
             )
 
-    # Добавляем элементы, которые есть только в file2
     for key in sorted(file2_dict):
         if key not in file1_dict:
             diff.append(
