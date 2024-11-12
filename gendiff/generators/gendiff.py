@@ -1,5 +1,4 @@
 from gendiff.constants import TYPE_OF_DIFFERENCES
-from gendiff.utils import read_json
 
 
 def format_value(value):

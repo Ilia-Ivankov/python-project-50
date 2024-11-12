@@ -2,6 +2,7 @@ import argparse
 from gendiff.generators.gendiff import generate_diff
 from gendiff.parser import parse_file
 
+
 def set_arguments():
     parser = argparse.ArgumentParser(add_help=True)
     parser = argparse.ArgumentParser(
