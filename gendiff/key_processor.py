@@ -22,24 +22,21 @@ def format_nested(key, value, depth, base_indent):
     return f"{base_indent}{key}: {nested_diff}"
 
 
-def process_key(key, file1, file2, depth, base_indent, symbol_indent):
+def process_key(key, data, depth):
     """Обрабатывает ключи и возвращает строки с форматированием в зависимости от различий."""
+    file1, file2 = data["file1"], data["file2"]
+    base_indent, symbol_indent = data["base_indent"], data["symbol_indent"]
+
     if key in file1 and key not in file2:
         return [format_removed(key, file1[key], depth, symbol_indent)]
-    elif key in file2 and key not in file1:
+    if key in file2 and key not in file1:
         return [format_added(key, file2[key], depth, symbol_indent)]
-    elif isinstance(file1[key], dict) and isinstance(file2[key], dict):
-        return [
-            format_nested(
-                key, (file1[key], file2[key]), depth, base_indent
-            )
-        ]
-    elif file1[key] != file2[key]:
+    if isinstance(file1[key], dict) and isinstance(file2[key], dict):
+        nested_diff = format_nested(key, (file1[key], file2[key]), depth, base_indent)
+        return [nested_diff]
+    if file1[key] != file2[key]:
         return [
             format_removed(key, file1[key], depth, symbol_indent),
             format_added(key, file2[key], depth, symbol_indent),
         ]
-    else:
-        return [
-            f"{base_indent}{key}: {format_value(file1[key], depth)}"
-        ]
+    return [f"{base_indent}{key}: {format_value(file1[key], depth)}"]
