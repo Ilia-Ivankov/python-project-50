@@ -6,7 +6,6 @@ from gendiff.formatters.helpers import (
 )
 
 
-
 def handle_removed(result, key, file1, depth):
     """Обрабатывает удаленные ключи."""
     result.append(format_removed(key, file1[key], depth))
