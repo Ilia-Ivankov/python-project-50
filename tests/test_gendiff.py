@@ -1,5 +1,4 @@
-from gendiff.formatters.stylish import generate_diff
-from gendiff.parser import parse_file
+from gendiff.diff import generate_diff
 
 def test_flt_json():
     path_to_file1 = 'tests/fixtures/file1.json'
@@ -13,8 +12,8 @@ def test_flt_json():
   + timeout: 20
   + verbose: true
 }'''
-    file1 = parse_file(path_to_file1)
-    file2 = parse_file(path_to_file2)
+    file1 = path_to_file1
+    file2 = path_to_file2
     result = generate_diff(file1, file2)
 
     assert result == expected
@@ -32,8 +31,8 @@ def test_flat_yaml():
   + timeout: 20
   + verbose: true
 }'''
-    file1 = parse_file(path_to_file1)
-    file2 = parse_file(path_to_file2)
+    file1 = path_to_file1
+    file2 = path_to_file2
     result = generate_diff(file1, file2)
 
 
@@ -85,8 +84,8 @@ def test_recursive_json():
     }
 }"""
     
-    file1 = parse_file(path_to_file1)
-    file2 = parse_file(path_to_file2)
+    file1 = path_to_file1
+    file2 = path_to_file2
     result = generate_diff(file1, file2)
 
     assert result == expected
