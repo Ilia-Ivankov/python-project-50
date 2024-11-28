@@ -20,7 +20,7 @@ expectation2 = """{
         }
         setting6: {
             doge: {
-              - wow: # noqa
+              - wow: 
               + wow: so much
             }
             key: value
