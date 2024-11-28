@@ -20,7 +20,7 @@ def test_flat_yaml():
     file1 = path_to_file1
     file2 = path_to_file2
     result = generate_diff(file1, file2)
-    
+
     assert result == expectation1
 
 
