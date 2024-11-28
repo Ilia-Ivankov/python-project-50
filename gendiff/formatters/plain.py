@@ -1,13 +1,4 @@
-def format_value(value, depth):
-    if isinstance(value, dict):
-        return "[complex value]"
-    elif isinstance(value, bool):
-        return str(value).lower()
-    elif isinstance(value, str):
-        return f"'{value}'"
-    elif value is None:
-        return "null"
-    return str(value)
+from gendiff.formatters.helpers import format_value_plain as format_value
 
 
 def generate_diff(file1, file2, depth=1, path=""):

@@ -33,3 +33,15 @@ def format_nested(key, values, depth):
     return [
         f"{nested_indent}{key}: {nested_diff}"
     ]
+
+
+def format_value_plain(value, depth):
+    if isinstance(value, dict):
+        return "[complex value]"
+    elif isinstance(value, bool):
+        return str(value).lower()
+    elif isinstance(value, str):
+        return f"'{value}'"
+    elif value is None:
+        return "null"
+    return str(value)
