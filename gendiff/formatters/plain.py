@@ -1,14 +1,13 @@
 def format_value(value, depth):
-    # Если значение является словарем, то это сложное значение
     if isinstance(value, dict):
         return "[complex value]"
-    # Если значение - булево, то выводим его в нижнем регистре
     elif isinstance(value, bool):
         return str(value).lower()
-    # Если строка, то оборачиваем в одинарные кавычки
     elif isinstance(value, str):
         return f"'{value}'"
-    return str(value)  # Для других типов данных, возвращаем строковое представление
+    elif value is None:
+        return "null"
+    return str(value)
 
 
 def generate_diff(file1, file2, depth=1, path=""):
