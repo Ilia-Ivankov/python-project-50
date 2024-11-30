@@ -78,4 +78,14 @@ Finally, install the package on your local machine by running:
 make package-install
 ```
 
+This will install the package locally, allowing you to use the `gendiff` tool directly on your machine
 
+## 6. Run the Tool
+
+After completing the above steps, you can run the `gendiff` tool locally and start using it by running:
+
+```bash
+gendiff -f <format> <first_file> <second_file>
+```
+
+Replace `<first_file>`, `<second_file>`, and `<format>` with the appropriate file paths and desired output format (such as `stylish`, `plain`, or `json`).
