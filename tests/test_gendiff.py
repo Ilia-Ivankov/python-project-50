@@ -1,9 +1,7 @@
 from gendiff.diff import generate_diff
 
 from tests.expectations.json import expectation1 as json_expectation
-
 from tests.expectations.plain import expectation1 as plain_expectation
-
 from tests.expectations.stylish import expectation1, expectation2
 
 
