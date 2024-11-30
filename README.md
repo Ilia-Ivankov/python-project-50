@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/Ilia-Ivankov/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Ilia-Ivankov/python-project-50/actions)
 ### Maintanability:
 [![Maintainability](https://api.codeclimate.com/v1/badges/22a84e877c1aaac04f1f/maintainability)](https://codeclimate.com/github/Ilia-Ivankov/python-project-50/maintainability)
-### CI
+### CI:
 [![Python CI](https://github.com/Ilia-Ivankov/python-project-50/actions/workflows/pyci.yml/badge.svg)](https://github.com/Ilia-Ivankov/python-project-50/actions/workflows/pyci.yml)
 ### Test Coverage:
 [![Test Coverage](https://api.codeclimate.com/v1/badges/22a84e877c1aaac04f1f/test_coverage)](https://codeclimate.com/github/Ilia-Ivankov/python-project-50/test_coverage)
@@ -89,3 +89,25 @@ gendiff -f <format> <first_file> <second_file>
 ```
 
 Replace `<first_file>`, `<second_file>`, and `<format>` with the appropriate file paths and desired output format (such as `stylish`, `plain`, or `json`).
+
+# Examples of the Output
+
+Difference between two plain json files:
+
+[![asciicast](https://asciinema.org/a/uDhEm8fX0HnP6eTWLBSPIRNxJ.svg)](https://asciinema.org/a/uDhEm8fX0HnP6eTWLBSPIRNxJ)
+
+Difference between two plain yaml files:
+
+[![asciicast](https://asciinema.org/a/NZgAGXX3i4Cpt98GWATrYTkRp.svg)](https://asciinema.org/a/NZgAGXX3i4Cpt98GWATrYTkRp)
+
+Difference between two nested files:
+
+[![asciicast](https://asciinema.org/a/4c0zQdh1g4UYlMcWM0uknCQmo.svg)](https://asciinema.org/a/4c0zQdh1g4UYlMcWM0uknCQmo)
+
+Plain difference between two nested files:
+
+[![asciicast](https://asciinema.org/a/83K2v4zM2cwMe3xxUQf4rje00.svg)](https://asciinema.org/a/83K2v4zM2cwMe3xxUQf4rje00)
+
+Json difference between two nested files:
+
+[![asciicast](https://asciinema.org/a/8bpzcpraRU6yUV5CSjW3ZAqkU.svg)](https://asciinema.org/a/8bpzcpraRU6yUV5CSjW3ZAqkU)
