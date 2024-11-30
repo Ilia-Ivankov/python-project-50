@@ -1,4 +1,5 @@
 import json
+
 from gendiff.key_processors.json import process_key_json
 
 

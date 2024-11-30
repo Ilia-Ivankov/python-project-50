@@ -1,8 +1,8 @@
 from gendiff.formatters.helpers import (
     format_added,
-    format_removed,
     format_nested,
-    format_value
+    format_removed,
+    format_value,
 )
 
 

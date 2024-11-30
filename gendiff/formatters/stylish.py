@@ -12,7 +12,9 @@ def generate_stylish_diff(file1, file2, depth=1):  # Начинаем с глу�
             "key": key,
             "depth": depth,
         }
-        result.extend(process_key_stylish(key, data))  # Обрабатываем ключ и добавляем в результат
+        result.extend(
+            process_key_stylish(key, data)
+        )  # Обрабатываем ключ и добавляем в результат
 
     indent = " " * ((depth - 1) * 4)  # Правильный отступ для текущего уровня
     return "{\n" + "\n".join(result) + f"\n{indent}}}"

@@ -15,7 +15,10 @@ def handle_added(result, key, context):
 def handle_nested(result, key, context):
     result.extend(
         generate_diff(
-            context['file1'][key], context['file2'][key], context['depth'] + 1, context['path']
+            context["file1"][key],
+            context["file2"][key],
+            context["depth"] + 1,
+            context["path"],
         )
     )
 
@@ -30,7 +33,7 @@ def handle_updated(result, key, context):
 
 def generate_diff(file1, file2, depth=1, path=""):
     result = []
-    keys = sorted(set(file1.keys()) | set(file2.keys()))  # Упорядоченные ключи
+    keys = sorted(set(file1.keys()) | set(file2.keys()))
 
     for key in keys:
         new_path = f"{path}.{key}" if path else key
@@ -45,7 +48,9 @@ def generate_diff(file1, file2, depth=1, path=""):
             handle_removed(result, key, context)
         elif key in file2 and key not in file1:
             handle_added(result, key, context)
-        elif isinstance(file1.get(key), dict) and isinstance(file2.get(key), dict):
+        elif isinstance(file1.get(key), dict) and isinstance(
+            file2.get(key), dict
+        ):
             handle_nested(result, key, context)
         elif file1.get(key) != file2.get(key):
             handle_updated(result, key, context)
