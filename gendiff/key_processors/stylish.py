@@ -7,17 +7,14 @@ from gendiff.formatters.helpers import (
 
 
 def handle_removed(key, file1, depth):
-    """Обрабатывает удаленные ключи."""
     return format_removed(key, file1[key], depth)
 
 
 def handle_added(key, file2, depth):
-    """Обрабатывает добавленные ключи."""
     return format_added(key, file2[key], depth)
 
 
 def handle_updated(key, file1, file2, depth):
-    """Обрабатывает измененные ключи."""
     return [
         format_removed(key, file1[key], depth),
         format_added(key, file2[key], depth),
@@ -25,7 +22,6 @@ def handle_updated(key, file1, file2, depth):
 
 
 def handle_unchanged(key, file1, depth):
-    """Обрабатывает неизмененные ключи."""
     base_indent = " " * (depth * 4)
     return [f"{base_indent}{key}: {format_value(file1[key], depth)}"]
 
