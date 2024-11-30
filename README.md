@@ -40,3 +40,42 @@ git clone https://github.com/Ilia-Ivankov/python-project-50.git
 ## 2. Installation
 
 Navigate into the project directory and install the required dependencies:
+
+```bash
+cd python-project-50
+```
+```bash
+make install
+```
+
+This command will install all necessary dependencies listed in the project
+
+## 3. Build the Project
+
+Once the dependencies are installed, build the project using the following command:
+
+```bash
+make build
+```
+
+This will prepare the project for further steps and ensure everything is compiled correctly.
+
+## 4. Publish the project
+
+After building the project, you can publish it using the command below:
+
+```bash
+make publish
+```
+
+Publishing will prepare the project for deployment.
+
+## 5. Install the Package Locally
+
+Finally, install the package on your local machine by running:
+
+```bash
+make package-install
+```
+
+
