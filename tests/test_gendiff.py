@@ -50,7 +50,7 @@ def test_plain_json():
     path_to_file2 = "tests/fixtures/file4.json"
     file1 = path_to_file1
     file2 = path_to_file2
-    result = generate_diff(file1, file2, format_name="plain")
+    result = generate_diff(file1, file2, style="plain")
 
     assert result == plain_expectation
 
@@ -60,7 +60,7 @@ def test_plain_yaml():
     path_to_file2 = "tests/fixtures/file6.yml"
     file1 = path_to_file1
     file2 = path_to_file2
-    result = generate_diff(file1, file2, format_name="plain")
+    result = generate_diff(file1, file2, style="plain")
 
     assert result == plain_expectation
 
@@ -70,7 +70,7 @@ def test_json():
     path_to_file2 = "tests/fixtures/file4.json"
     file1 = path_to_file1
     file2 = path_to_file2
-    result = generate_diff(file1, file2, format_name="json")
+    result = generate_diff(file1, file2, style="json")
 
     assert result == json_expectation
 
@@ -80,6 +80,6 @@ def test_json_yaml():
     path_to_file2 = "tests/fixtures/file6.yml"
     file1 = path_to_file1
     file2 = path_to_file2
-    result = generate_diff(file1, file2, format_name="json")
+    result = generate_diff(file1, file2, style="json")
 
     assert result == json_expectation

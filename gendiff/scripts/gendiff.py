@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-from gendiff.cli import set_arguments
+from gendiff.diff import generate_diff 
+from gendiff.cli import get_args
+import argparse
 
 
 def main():
-    set_arguments()
+    args = get_args()
+    diff = generate_diff(
+        args.first_file, args.second_file, style=args.format
+    )
+    return diff
 
 
 if __name__ == "__main__":
