@@ -1,7 +1,5 @@
 def create_difference_tree(data1, data2):
-    keys = sorted(
-        set(data1.keys()) | set(data2.keys())
-    )
+    keys = sorted(set(data1.keys()) | set(data2.keys()))
     tree = []
 
     for key in keys:
