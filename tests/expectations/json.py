@@ -1,52 +1,52 @@
-expectation1 = """[
+expectation1 = '''[
     {
         "key": "common",
-        "status": "nested",
+        "type": "nested",
         "children": [
             {
                 "key": "follow",
-                "status": "added",
+                "type": "added",
                 "value": false
             },
             {
                 "key": "setting1",
-                "status": "unchanged",
+                "type": "unchanged",
                 "value": "Value 1"
             },
             {
                 "key": "setting2",
-                "status": "removed",
+                "type": "removed",
                 "value": 200
             },
             {
                 "key": "setting3",
-                "status": "updated",
+                "type": "changed",
                 "old_value": true,
                 "new_value": null
             },
             {
                 "key": "setting4",
-                "status": "added",
+                "type": "added",
                 "value": "blah blah"
             },
             {
                 "key": "setting5",
-                "status": "added",
+                "type": "added",
                 "value": {
                     "key5": "value5"
                 }
             },
             {
                 "key": "setting6",
-                "status": "nested",
+                "type": "nested",
                 "children": [
                     {
                         "key": "doge",
-                        "status": "nested",
+                        "type": "nested",
                         "children": [
                             {
                                 "key": "wow",
-                                "status": "updated",
+                                "type": "changed",
                                 "old_value": "",
                                 "new_value": "so much"
                             }
@@ -54,12 +54,12 @@ expectation1 = """[
                     },
                     {
                         "key": "key",
-                        "status": "unchanged",
+                        "type": "unchanged",
                         "value": "value"
                     },
                     {
                         "key": "ops",
-                        "status": "added",
+                        "type": "added",
                         "value": "vops"
                     }
                 ]
@@ -68,22 +68,22 @@ expectation1 = """[
     },
     {
         "key": "group1",
-        "status": "nested",
+        "type": "nested",
         "children": [
             {
                 "key": "baz",
-                "status": "updated",
+                "type": "changed",
                 "old_value": "bas",
                 "new_value": "bars"
             },
             {
                 "key": "foo",
-                "status": "unchanged",
+                "type": "unchanged",
                 "value": "bar"
             },
             {
                 "key": "nest",
-                "status": "updated",
+                "type": "changed",
                 "old_value": {
                     "key": "value"
                 },
@@ -93,7 +93,7 @@ expectation1 = """[
     },
     {
         "key": "group2",
-        "status": "removed",
+        "type": "removed",
         "value": {
             "abc": 12345,
             "deep": {
@@ -103,7 +103,7 @@ expectation1 = """[
     },
     {
         "key": "group3",
-        "status": "added",
+        "type": "added",
         "value": {
             "deep": {
                 "id": {
@@ -113,4 +113,4 @@ expectation1 = """[
             "fee": 100500
         }
     }
-]"""
+]'''

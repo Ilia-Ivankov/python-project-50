@@ -15,5 +15,5 @@ def parse(file, extension):
     match extension:
         case "json":
             return read_json(file)
-        case "yaml" | "yml" :
+        case "yaml" | "yml":
             return read_yaml(file)

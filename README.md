@@ -111,3 +111,24 @@ Plain difference between two nested files:
 Json difference between two nested files:
 
 [![asciicast](https://asciinema.org/a/8bpzcpraRU6yUV5CSjW3ZAqkU.svg)](https://asciinema.org/a/8bpzcpraRU6yUV5CSjW3ZAqkU)
+
+# Stack Technologies
+
+## Programming Language
+- *Python*: version ^3.10
+
+## Dependencies
+### Main dependencies
+- *PyYAML*: library for working with YAML files, version ^6.0.2
+
+### Development
+- *flake8*: tool for static code analysis, version ^7.1.1
+- *pytest*: testing framework, version ^8.3.3
+- *pytest-cov*: plugin for pytest that provides code coverage, version ^6.0.0
+
+## Build System
+- *Poetry*: tool for dependency management and packaging, version poetry-core>=1.0.0
+
+## Scripts
+- *gendiff*: main script of the project for working with file differences. It is executed via gendiff.scripts.gendiff:main.
+-
