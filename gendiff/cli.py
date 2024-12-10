@@ -1,5 +1,5 @@
 import argparse
-
+from gendiff import generate_diff
 
 def get_args():
     parser = argparse.ArgumentParser(
@@ -11,4 +11,5 @@ def get_args():
         "-f", "--format", help="set format of output", default="stylish"
     )
     args = parser.parse_args()
-    return args
+    diff = generate_diff(args.first_file, args.second_file, style=args.format)
+    print(diff)
